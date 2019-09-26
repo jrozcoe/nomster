@@ -1,10 +1,24 @@
-Rails.application.configure do
-  config.action_mailer.default_url_options = { host: 'nomster-jordan-roszkowiak.herokuapp.com' }
-  # Settings specified here will take precedence over those in config/application.rb.
 
   # In the development environment your application's code is reloaded on
   # every request. This slows down response time but is perfect for development
   # since you don't have to restart the web server when you make code changes.
+  Rails.application.configure do
+  config.action_mailer.delivery_method = :smtp
+
+  config.action_mailer.smtp_settings = {
+    address: "smtp.gmail.com",
+    port: 587,
+    domain: "example.com",
+    authentication: "plain",
+    enable_starttls_auto: true,
+    user_name: ENV['jrozcoe18@gmail.com'],
+    password: ENV['G#Wednesday0831']
+  }
+
+  config.action_mailer.default_url_options = {host: 'localhost:3030'}
+
+  # more code here....
+ end
   config.cache_classes = false
 
   # Do not eager load code on boot.
