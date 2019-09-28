@@ -18,7 +18,6 @@
   config.action_mailer.default_url_options = {host: 'localhost:3030'}
   config.action_mailer.delivery_method = :test
   # more code here....
- end
   config.cache_classes = false
 
   # Do not eager load code on boot.
