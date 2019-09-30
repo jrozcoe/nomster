@@ -21,10 +21,13 @@ module Nomster
     # config.i18n.default_locale = :de
 
     # Add the fonts path
-    config.assets.paths << "#{Rails.root}/app/assets/fonts"
+    # config.assets.paths << "#{Rails.root}/app/assets/fonts"
 
-    # Precompile additional assets
-    config.assets.precompile += %w( .svg .eot .woff .ttf )
+    # # Precompile additional assets
+    # config.assets.precompile += %w( .svg .eot .woff .ttf )
+    
+    
+    Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
 
   end
 end
